@@ -1,0 +1,72 @@
+﻿<Window x:Class="Etterem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Etterem"
+        mc:Ignorable="d"
+        Title="Étterem" Height="450" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontSize="20" FontWeight="Bold" FontFamily="Magneto">Adagok</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox x:Name="comboadag" Width="100" Height="20" SelectedItem="0">
+                <ComboBoxItem Content="Kismenü"/>
+                <ComboBoxItem Content="Közepesmenü"/>
+                <ComboBoxItem Content="Nagymenü"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontSize="20" FontWeight="Bold" FontFamily="Magneto">Éttelek</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label VerticalAlignment="Center" Content="Levesek: "/>
+            <ComboBox x:Name="comboSoups" Width="100" Height="20" SelectedItem="0">
+                <ComboBoxItem Content="Babgulyás"/>
+                <ComboBoxItem Content="Borsóleves"/>
+                <ComboBoxItem Content="Frankfurtileves"/>
+            </ComboBox>
+            <Label VerticalAlignment="Center" Content="Főételek: "/>
+            <ComboBox x:Name="comboMainMenus" Width="100" Height="20" SelectedItem="0">
+                <ComboBoxItem Content="Rántotthús"/>
+                <ComboBoxItem Content="Finomfőzelék"/>
+                <ComboBoxItem Content="Bologhnai-Spagetti"/>
+            </ComboBox>
+            <Label VerticalAlignment="Center" Content="Desszertek: "/>
+            <ComboBox x:Name="comboDeserts" Width="100" Height="20" SelectedItem="0">
+                <ComboBoxItem Content="Briós"/>
+                <ComboBoxItem Content="Sajtospogácsa"/>
+                <ComboBoxItem Content="Fagylalt"/>
+            </ComboBox>
+            <Button x:Name="Hozzáadás" Content="Hozzáadás" Width="100" Height="20" Margin="10" Click="hozzadas"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontSize="20" FontWeight="Bold" FontFamily="Magneto">Italok</Label></StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox x:Name="comboItalok" Width="100" Height="20" SelectedItem="0">
+                <ComboBoxItem Content="Tea"/>
+                <ComboBoxItem Content="Kávé"/>
+                <ComboBoxItem Content="Pepsi"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
+            <DataGrid x:Name="talca" Width="450"  Margin="10"/>
+            <DataGrid x:Name="arakft" Width="650"  Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Törlés" Width="100" Margin="10" Click="torles"/>
+            <Button Content="Kilépés" Width="100" Margin="10" Click="kilepes"/>
+        </StackPanel>
+    </Grid>
+</Window>
